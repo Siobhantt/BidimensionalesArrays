@@ -44,10 +44,6 @@ public class Ej3 {
 			System.out.println();
 		}//fin del for
 		
-		for(int i=0;i<notas[i].length;i++) {
-			for(int j=0;j<notas[i].length;j++) {
-				
-			}
-		}
+		
 	}// fin del main
 }
