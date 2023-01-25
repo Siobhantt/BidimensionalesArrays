@@ -11,7 +11,8 @@ public class Ej3 {
 	 * continuación, mostrará la nota mínima, máxima y media de cada alumno.
 	 */
 	public static void main(String[] args) {
-
+		int min;
+		int max;
 		int numUser;
 		int notas[][];
 		Scanner lee = new Scanner(System.in);
@@ -19,23 +20,34 @@ public class Ej3 {
 
 		for (int i = 0; i < notas.length; i++) {
 			System.out.println("Por favor introduzca las Notas del alumno " + (i + 1));
+// en este for solicito las notas
 			for (int j = 0; j <= notas.length; j++) {
-				numUser = lee.nextInt();
-				if(numUser<0 ||numUser>10) {
-				System.err.println("Las notas deben estar entre 0 y 10");
-				}
-				else {
-					notas[i][j] = numUser;
+				numUser = lee.nextInt();//en caso de no ser validas imprimo un error
+				if (numUser < 0 || numUser > 10) {
+					System.err.println("Las notas deben estar entre 0 y 10");
+					while (numUser<0||numUser>10) {//con este while vuelvo a solicitar las notas 
+						numUser=lee.nextInt();
+						notas[i][j]=numUser; //has que sean correctas y las guardo en la tabla
+						
+					}
+				} else {
+					notas[i][j] = numUser;//en caso de que sean correctas se guardan
 				}
 			} // for interno
 		} // for principal
 
-		for (int i = 0; i < notas.length; i++) {
+		for (int i = 0; i < notas.length; i++) {//aqui uso la formula que dio la profe para que salgan bien impresas
 			System.out.print("Alumno " + (i + 1) + ": ");
 			for (int j = 0; j < notas[i].length; j++) {
 				System.out.print((notas[i][j]) + "\t");
 			}
 			System.out.println();
+		}//fin del for
+		
+		for(int i=0;i<notas[i].length;i++) {
+			for(int j=0;j<notas[i].length;j++) {
+				
+			}
 		}
 	}// fin del main
 }
