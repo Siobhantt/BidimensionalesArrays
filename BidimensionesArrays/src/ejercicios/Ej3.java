@@ -60,7 +60,11 @@ public class Ej3 {
 			suma+=notas[i][j];
 			}//fin del for J
 			media =(double) suma/notas[i].length;
+
 			System.out.println("La nota maximo del alumno " + max );
+
+			System.out.println("La nota maximo del alumno " +  );
+
 		}
 		
 		
