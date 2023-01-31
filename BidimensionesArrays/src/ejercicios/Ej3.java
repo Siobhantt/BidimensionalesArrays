@@ -45,6 +45,7 @@ public class Ej3 {
 			}
 			System.out.println();
 		} // fin del for
+		System.out.println();
 		
 		for (int i=0; i<notas.length;i++){
 			min=10;
