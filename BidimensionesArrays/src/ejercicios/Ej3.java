@@ -62,9 +62,9 @@ public class Ej3 {
 			media =(double) suma/notas[i].length;
 
 			System.out.println("La nota maximo del alumno " + max );
-
-			System.out.println("La nota maximo del alumno " +  );
-
+			System.out.println("La nota minima del alumno " +  min);
+			System.out.println("La nota media del alumno " +  media);
+			System.out.println();
 		}
 		
 		

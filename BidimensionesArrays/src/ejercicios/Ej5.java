@@ -1,5 +1,7 @@
 package ejercicios;
 
+import java.util.Arrays;
+
 public class Ej5 {
 /*Escribe un programa que genere 20 números enteros aleatorios entre 100 y 999.
  *  Estos números se deben introducir en un array de 4 filas por 5 columnas. 
@@ -12,10 +14,10 @@ public class Ej5 {
 		
 		for(int i=0;i<tabla.length;i++) {
 			for(int j=0; j<tabla[i].length;j++) {
-				tabla[i][j]=(int)Math.random()*999+100;
+				tabla[i][j]=(int)(Math.random()*(999-100+1)+100); //formula mathrandom()*(max-min+1)+min
 			}
 		}
-		
+		System.out.println(Arrays.deepToString(tabla));
 	}
 
 }
