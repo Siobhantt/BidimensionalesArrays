@@ -11,9 +11,10 @@ public class Ej5 {
 	public static void main(String[] args) {
 		int tabla[][];
 		tabla = new int[4][5];
-		int sumaTotal=0;
+		int total=0;
 		int sumaFila=0;
 		int sumaColumna=0;
+		
 		
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
@@ -23,21 +24,24 @@ public class Ej5 {
 	
 		
 		for(int i=0;i<tabla.length;i++) {
+			sumaFila=0;//se reinicia suma fila a 0
 			for(int j=0;j<tabla[i].length;j++) {
-				sumaTotal+=tabla[i][j];
+				sumaFila+=tabla[i][j]; //en suma fila guardamos lo que este en el recorrido
+				System.out.print(tabla[i][j]+ " "); //imprimo la tabla
 			}
-			System.out.print(Arrays.toString(tabla[i]));
-			System.out.print(sumaTotal);
-			
+			total+=sumaFila;
+			System.out.println(sumaFila); //imrpimo el resultado de sumaFila
 		}//fin del for
 		
 		
-		for(int i=0;i<tabla.length;i++) {
-			for(int j=0;j<tabla[0].length;j++) {
-				sumaTotal+=tabla[j][i];
+		for(int i=0;i<tabla[0].length;i++) {
+			sumaColumna =0;
+			for(int j=0;j<tabla.length;j++) {
+				sumaColumna+=tabla[j][i];
 			}
-			
-		}//fi
+			System.out.print(sumaColumna + " ");
+		}//fin del for
+		
+		System.out.println(total);
 	}//fin del Main
-
 }
