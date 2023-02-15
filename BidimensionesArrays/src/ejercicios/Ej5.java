@@ -27,7 +27,7 @@ public class Ej5 {
 			sumaFila=0;//se reinicia suma fila a 0
 			for(int j=0;j<tabla[i].length;j++) {
 				sumaFila+=tabla[i][j]; //en suma fila guardamos lo que este en el recorrido
-				System.out.print(tabla[i][j]+ " "); //imprimo la tabla
+				System.out.print(tabla[i][j]+ "\t"); //imprimo la tabla
 			}
 			total+=sumaFila;
 			System.out.println(sumaFila); //imrpimo el resultado de sumaFila
@@ -39,7 +39,8 @@ public class Ej5 {
 			for(int j=0;j<tabla.length;j++) {
 				sumaColumna+=tabla[j][i];
 			}
-			System.out.print(sumaColumna + " ");
+		
+			System.out.print(sumaColumna + "\t");
 		}//fin del for
 		
 		System.out.println(total);
